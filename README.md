@@ -26,6 +26,7 @@ Inicio de sesión.
 Acceso a las funcionalidades de la plataforma.
 Navegación entre las diferentes secciones del sitio.
 🛍️ Productos
+
 Visualización del catálogo de productos.
 Consulta de información individual de cada producto.
 Página de detalle de producto.
