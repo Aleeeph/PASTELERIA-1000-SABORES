@@ -2,8 +2,6 @@
 
 
 
-
-
 📖 Descripción
 Pastelería 1000 Sabores es un proyecto web desarrollado como parte de la evaluación semestral de Desarrollo Fullstack.
 
