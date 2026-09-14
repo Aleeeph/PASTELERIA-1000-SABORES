@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi carrito — Pastelería 1000 Sabores</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">1000</span> Pastelería 1000 Sabores</a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <nav aria-label="Navegación principal">
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html">Iniciar sesión</a>
+      <a href="carrito.html" class="cart-link" aria-current="page">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding:2.5rem 1.5rem 4rem;">
+  <h1>Mi carrito de compras</h1>
+
+  <div id="carrito-vacio" class="empty-cart" style="display:none;">
+    <p>Tu carrito está vacío por ahora.</p>
+    <a href="productos.html" class="btn btn-primary">Ver productos</a>
+  </div>
+
+  <div class="cart-layout">
+    <div>
+      <div id="lista-carrito"></div>
+    </div>
+
+    <aside id="cart-summary" class="cart-summary">
+      <h2>Resumen</h2>
+      <div class="total-row">
+        <span>Total</span>
+        <span id="carrito-total">$0</span>
+      </div>
+      <div class="form-msg" id="checkout-msg" role="alert"></div>
+      <button id="btn-pagar" class="btn btn-primary" style="width:100%;">Pagar</button>
+      <p class="hint" style="margin-top:0.75rem;">El carrito se guarda en tu navegador (localStorage), aunque cierres la página.</p>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="anio-actual"></span> Pastelería 1000 Sabores.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/carrito.js"></script>
+</body>
+</html>

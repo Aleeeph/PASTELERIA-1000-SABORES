@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Pastelería 1000 Sabores</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">1000</span> Pastelería 1000 Sabores</a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <nav aria-label="Navegación principal">
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html">Iniciar sesión</a>
+      <a href="carrito.html" class="cart-link">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contacto</h1>
+      <p>¿Dudas sobre un pedido o quieres visitarnos? Escríbenos.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="contact-grid">
+      <form class="form-card wide" id="form-contacto" novalidate>
+        <div class="form-msg" role="alert"></div>
+
+        <div class="form-row" id="row-nombre-contacto">
+          <label for="contacto-nombre">Nombre completo</label>
+          <input type="text" id="contacto-nombre" maxlength="100">
+          <span class="field-error"></span>
+        </div>
+
+        <div class="form-row" id="row-correo-contacto">
+          <label for="contacto-correo">Correo (opcional)</label>
+          <input type="email" id="contacto-correo" maxlength="100" placeholder="nombre@duoc.cl">
+          <span class="field-error"></span>
+        </div>
+
+        <div class="form-row" id="row-comentario">
+          <label for="contacto-comentario">Mensaje</label>
+          <textarea id="contacto-comentario" maxlength="500"></textarea>
+          <span class="field-error"></span>
+          <p class="hint">Máximo 500 caracteres.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>Otras formas de contactarnos</h2>
+        <ul>
+          <li>📍 Av. Providencia 1234, Providencia, Santiago</li>
+          <li>📞 +56 9 8765 4321</li>
+          <li>✉️ hola@1000sabores.cl</li>
+          <li>🕒 Lunes a sábado, 9:00–19:00</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="anio-actual"></span> Pastelería 1000 Sabores.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/validaciones.js"></script>
+</body>
+</html>

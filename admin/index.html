@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel administrador — Pastelería 1000 Sabores</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="brand"><span class="mark">1000</span> Pastelería Admin</div>
+    <nav aria-label="Navegación administrador">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+    <a class="back-link" href="../index.html">← Volver a la tienda</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1>¡Hola, Administrador!</h1>
+    </div>
+
+    <div class="admin-cards">
+      <div class="admin-card">
+        <p class="hint">Productos activos</p>
+        <div class="stat" id="stat-productos">–</div>
+      </div>
+      <div class="admin-card">
+        <p class="hint">Usuarios registrados</p>
+        <div class="stat" id="stat-usuarios">–</div>
+      </div>
+      <div class="admin-card">
+        <p class="hint">Productos con stock crítico</p>
+        <div class="stat" id="stat-criticos">–</div>
+      </div>
+    </div>
+
+    <p>Desde el menú lateral puedes gestionar el catálogo de productos y los usuarios del sistema. Los cambios se guardan localmente en este navegador mientras el proyecto no tiene backend (etapa EV1).</p>
+  </main>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="js/admin.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const productos = obtenerProductosAdmin();
+    const usuarios = obtenerUsuariosAdmin();
+    document.querySelector("#stat-productos").textContent = productos.length;
+    document.querySelector("#stat-usuarios").textContent = usuarios.length;
+    document.querySelector("#stat-criticos").textContent = productos.filter(p => p.stock <= p.stockCritico).length;
+  });
+</script>
+</body>
+</html>

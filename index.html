@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pastelería 1000 Sabores — Repostería chilena</title>
+<meta name="description" content="Pastelería 1000 Sabores: tortas y repostería artesanal para celebrar todos tus momentos.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">1000</span> Pastelería 1000 Sabores</a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <nav aria-label="Navegación principal">
+      <ul class="main-nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrarse</a>
+      <a href="carrito.html" class="cart-link">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div>
+        <p class="eyebrow">50 años endulzando Chile</p>
+        <h1>Momentos inolvidables comienzan con una torta</h1>
+        <p>Celebramos cinco décadas de tradición pastelera con tortas, dulces y recetas hechas con cariño para cada ocasión.</p>
+        <div class="hero-actions">
+          <a href="productos.html" class="btn btn-accent">Ver productos</a>
+          <a href="nosotros.html" class="btn btn-outline" style="border-color:#EFE4D2;color:#EFE4D2;">Conócenos</a>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=800&q=80" alt="Torta decorada de Pastelería 1000 Sabores">
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-head">
+      <div>
+        <h2>Lo más pedido esta semana</h2>
+        <p>Tortas y dulces artesanales para compartir, regalar y celebrar.</p>
+      </div>
+      <a href="productos.html">Ver todo el catálogo →</a>
+    </div>
+    <div class="product-grid" id="grid-productos"></div>
+  </section>
+
+  <section class="container">
+    <div class="section-head">
+      <h2>Historias con sabor</h2>
+    </div>
+    <div class="blog-grid" id="grid-blogs"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Pastelería 1000 Sabores</h3>
+        <p>Repostería chilena con tradición, creatividad y una historia que celebra 50 años.</p>
+      </div>
+      <div>
+        <h3>Tienda</h3>
+        <ul>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Novedades</h3>
+        <p>Recibe notas de cata y nuevos lotes.</p>
+        <form class="newsletter" onsubmit="return false;">
+          <input type="email" placeholder="tu@correo.com" aria-label="Correo para novedades">
+          <button class="btn btn-accent btn-small" type="submit">Unirme</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="anio-actual"></span> Pastelería 1000 Sabores.</span>
+      <span>Hecho con HTML, CSS y JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/blogs.js"></script>
+</body>
+</html>

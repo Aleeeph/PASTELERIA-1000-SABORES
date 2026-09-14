@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalle de producto — Pastelería 1000 Sabores</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">1000</span> Pastelería 1000 Sabores</a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <nav aria-label="Navegación principal">
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrarse</a>
+      <a href="carrito.html" class="cart-link">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="padding-top:2.5rem;">
+  <div class="product-detail" id="detalle-producto">
+    <!-- Contenido generado por js/productos.js según ?codigo= en la URL -->
+  </div>
+
+  <h2 class="related-title">También te puede interesar</h2>
+  <div class="product-grid" id="grid-relacionados"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="anio-actual"></span> Pastelería 1000 Sabores.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/productos.js"></script>
+</body>
+</html>

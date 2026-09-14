@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producto — Panel administrador</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="brand"><span class="mark">1000</span> Pastelería Admin</div>
+    <nav aria-label="Navegación administrador">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+    <a class="back-link" href="../index.html">← Volver a la tienda</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1 id="titulo-form-producto">Nuevo producto</h1>
+    </div>
+
+    <form class="form-card wide" id="form-producto" novalidate>
+      <div class="form-msg" role="alert"></div>
+
+      <div class="form-row" id="row-prod-codigo">
+        <label for="prod-codigo">Código de producto</label>
+        <input type="text" id="prod-codigo" placeholder="PMS-009">
+        <span class="field-error"></span>
+        <p class="hint">Requerido, mínimo 3 caracteres, sin límite máximo.</p>
+      </div>
+
+      <div class="form-row" id="row-prod-nombre">
+        <label for="prod-nombre">Nombre</label>
+        <input type="text" id="prod-nombre" maxlength="100">
+        <span class="field-error"></span>
+      </div>
+
+      <div class="form-row" id="row-prod-descripcion">
+        <label for="prod-descripcion">Descripción (opcional)</label>
+        <textarea id="prod-descripcion" maxlength="500"></textarea>
+        <span class="field-error"></span>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-row" id="row-prod-precio">
+          <label for="prod-precio">Precio (CLP)</label>
+          <input type="number" id="prod-precio" min="0" step="0.01">
+          <span class="field-error"></span>
+          <p class="hint">0 se considera producto gratuito.</p>
+        </div>
+        <div class="form-row" id="row-prod-stock">
+          <label for="prod-stock">Stock</label>
+          <input type="number" id="prod-stock" min="0" step="1">
+          <span class="field-error"></span>
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-row" id="row-prod-stock-critico">
+          <label for="prod-stock-critico">Stock crítico (opcional)</label>
+          <input type="number" id="prod-stock-critico" min="0" step="1">
+          <p class="hint">Se mostrará una alerta cuando el stock sea igual o menor.</p>
+        </div>
+        <div class="form-row" id="row-prod-categoria">
+          <label for="prod-categoria">Categoría</label>
+          <select id="prod-categoria">
+            <option value="">-- Seleccione --</option>
+            <option value="tortas">Tortas</option>
+            <option value="pasteles">Pasteles</option>
+            <option value="tartas">Tartas</option>
+            <option value="dulces">Dulces</option>
+            <option value="celebraciones">Celebraciones</option>
+          </select>
+          <span class="field-error"></span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Guardar producto</button>
+      <a href="productos.html" class="btn btn-outline">Cancelar</a>
+    </form>
+  </main>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/validaciones.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

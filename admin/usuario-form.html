@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usuario — Panel administrador</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <div class="brand"><span class="mark">1000</span> Pastelería Admin</div>
+    <nav aria-label="Navegación administrador">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="usuarios.html" aria-current="page">Usuarios</a></li>
+      </ul>
+    </nav>
+    <a class="back-link" href="../index.html">← Volver a la tienda</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1 id="titulo-form-usuario">Nuevo usuario</h1>
+    </div>
+
+    <form class="form-card wide" id="form-usuario" novalidate>
+      <div class="form-msg" role="alert"></div>
+
+      <div class="form-row" id="row-usr-run">
+        <label for="usr-run">RUN</label>
+        <input type="text" id="usr-run" placeholder="19011022K" maxlength="9">
+        <span class="field-error"></span>
+        <p class="hint">Sin puntos ni guion. Entre 7 y 9 caracteres.</p>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-row" id="row-usr-nombre">
+          <label for="usr-nombre">Nombre</label>
+          <input type="text" id="usr-nombre" maxlength="50">
+          <span class="field-error"></span>
+        </div>
+        <div class="form-row" id="row-usr-apellidos">
+          <label for="usr-apellidos">Apellidos</label>
+          <input type="text" id="usr-apellidos" maxlength="100">
+          <span class="field-error"></span>
+        </div>
+      </div>
+
+      <div class="form-row" id="row-usr-correo">
+        <label for="usr-correo">Correo</label>
+        <input type="email" id="usr-correo" maxlength="100">
+        <span class="field-error"></span>
+        <p class="hint">Solo @duoc.cl, @profesor.duoc.cl o @gmail.com.</p>
+      </div>
+
+      <div class="form-row" id="row-usr-tipo">
+        <label for="usr-tipo">Tipo de usuario</label>
+        <select id="usr-tipo">
+          <option value="Cliente">Cliente</option>
+          <option value="Vendedor">Vendedor</option>
+          <option value="Administrador">Administrador</option>
+        </select>
+        <p class="hint">Administrador: acceso total. Vendedor: solo ve productos y órdenes. Cliente: solo accede a la tienda.</p>
+      </div>
+
+      <div class="form-row two-col">
+        <div class="form-row" id="row-usr-region">
+          <label for="usr-region">Región</label>
+          <select id="usr-region">
+            <option value="">-- Seleccione la región --</option>
+          </select>
+        </div>
+        <div class="form-row" id="row-usr-comuna">
+          <label for="usr-comuna">Comuna</label>
+          <select id="usr-comuna">
+            <option value="">-- Seleccione la comuna --</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row" id="row-usr-direccion">
+        <label for="usr-direccion">Dirección</label>
+        <input type="text" id="usr-direccion" maxlength="300">
+        <span class="field-error"></span>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Guardar usuario</button>
+      <a href="usuarios.html" class="btn btn-outline">Cancelar</a>
+    </form>
+  </main>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/validaciones.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

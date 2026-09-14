@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros — Pastelería 1000 Sabores</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">1000</span> Pastelería 1000 Sabores</a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <nav aria-label="Navegación principal">
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html">Iniciar sesión</a>
+      <a href="registro.html">Registrarse</a>
+      <a href="carrito.html" class="cart-link">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Nosotros</h1>
+      <p>50 años de tradición, creatividad y dulzura chilena.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="about-grid">
+      <div>
+        <h2>Una historia para celebrar</h2>
+        <p>Pastelería 1000 Sabores es un referente de la repostería chilena. En 1995 participamos en la creación de la torta más grande del mundo, un récord Guinness que marcó nuestra historia.</p>
+        <p>Nuestra misión es ofrecer una experiencia dulce y memorable con tortas y productos de alta calidad para todas las ocasiones, apoyando también la formación de nuevos talentos en gastronomía.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700&q=80" alt="Torta artesanal de Pastelería 1000 Sabores">
+    </div>
+
+    <h2 style="margin-top:3.5rem;">Nuestro equipo pastelero</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=300&q=80" alt="Pastelera de Pastelería 1000 Sabores">
+        <h3>Javiera Soto</h3>
+        <p class="hint">Maestra pastelera</p>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=300&q=80" alt="Chef pastelero">
+        <h3>Matías Reyes</h3>
+        <p class="hint">Chef de innovación y sabores</p>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=300&q=80" alt="Desarrolladora del proyecto">
+        <h3>Constanza Vidal</h3>
+        <p class="hint">Comunidad y formación gastronómica</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="anio-actual"></span> Pastelería 1000 Sabores.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
